@@ -6,7 +6,7 @@ A content aggregator site made using Flask and Bootstrap. Get all your science a
 
 * NASA Apod 
 * The XML Scraping of techexplore for articles on all kinds of topics --> make tabs for this
-* The Tech news API used in discord bot for getting tech related news ( Happenings in the tech industry. 
+* as much sites that are scrapable from below
 
 ### Try to check for scraping or an API for the following sites : 
 
