@@ -6,30 +6,25 @@
 
 {% block content %}
 
-	<div class="container">
-		<div class="row d-flex d-flex justify-content-center my-4">
-			<div class="col-7">
-				<div class="card mx-auto text-white bg-dark mb-4">
-					<div class="card-header text-center display-4">
-			      		NASA APOD	
-			    	</div>
-			    	{% if videocheck == "False" %}
-						<img class="card-img-top" src="{{ url }}"  style = "display: block; margin: 0 auto;">
-					{% else %}
-						<iframe src="{{ url }}" type="text/html" width="100%" height="100%" class="card-img-top" frameborder="0"style = "display: block; margin: 0 auto;"></iframe>
-					{% endif %} 
-					<div class="card-body">
-						<h5><strong>{{ title }}</strong></h5>
-						<hr class="my-3">
-						<p>{{ information }}</p>
-						<br/>
-					</div>
-			    		<div class="card-footer">
-			      			<small class="text-white font-italic text-center">Powered by NASA's Open APOD API</small>
-			    		</div>
-				</div>
-			</div>
+	
+	<div class="card mx-auto text-white bg-dark" style="width: 25rem;">
+		<div class="card-header text-center display-4">
+      		NASA APOD	
+    	</div>
+    	{% if videocheck == "False" %}
+			<img class="card-img-top" src="{{ url }}"  style = "display: block; margin: 0 auto;">
+		{% else %}
+			<iframe src="{{ url }}" type="text/html" width="100%" height="100%" class="card-img-top" frameborder="0"style = "display: block; margin: 0 auto;"></iframe>
+		{% endif %} 
+		<div class="card-body">
+			<h5><strong>{{ title }}</strong></h5>
+			<hr class="my-3">
+			<p>{{ information }}</p>
+			<br/>
 		</div>
+    		<div class="card-footer">
+      			<small class="text-white font-italic text-center">Powered by NASA's Open APOD API</small>
+    		</div>
 	</div>	
 		
 
