@@ -4,7 +4,7 @@ import feedparser
 from newsapi import NewsApiClient
 
 app = Flask(__name__)
-newsapi = NewsApiClient(api_key="9cce768791f84ab2ba78096532b1abfe")
+newsapi = NewsApiClient(api_key=API_KEY)
 
 @app.route("/")
 def home_page():
@@ -13,7 +13,7 @@ def home_page():
 @app.route("/nasa-apod")
 def nasa_apod():
 
-	info = requests.get('https://api.nasa.gov/planetary/apod?api_key=1PpGWDvabRNj3fOX16fHPeSz4gzlYZAOR0jjqcQe').text
+	info = requests.get('https://api.nasa.gov/planetary/apod?api_key=API_KEY').text
 	information = eval(info)['explanation']
 	title = eval(info)['title']
 	url = None
