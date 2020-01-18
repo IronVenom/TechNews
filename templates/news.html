@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+
+{% block title %}News{% endblock %}
+
+{% block stylesheet %}<link rel="stylesheet" type="text/css" href="static/index.css">{% endblock %}
+
+{% block content %}
+	<div class="container text-white my-4">
+		<div class="display-4 my-4">News</div>
+		<hr class="my-2">
+		<div>	
+		<h2 class="text-center">Techcrunch</h2>
+			<div class="row d-flex justify-content-center">
+				{% if techcrunch|length < 5%}
+					{% for i in range(0,techcrunch|length) %}
+						<div class="col-12 col-sm-8">
+							<div class="card my-2 text-white bg-dark p-4">
+								<div class="row">
+									{% if techcrunch[i]['urlToImage'] is not none %}
+										<div class="col-3 my-auto">
+											<img src="{{ techcrunch[i]['urlToImage'] }}" class="card-img-top">
+										</div>
+										<div class="col-9">
+											<div class="card-body">
+												<h5 class="card-title">{{ techcrunch[i]['title'] }}</h5>
+												<p class="card-text">{{ techcrunch[i]['description'] }}</p>
+												<a href="{{ techcrunch[i]['url'] }}" class="btn btn-primary">More Details</a>
+											</div>	
+										</div>
+									{% else %}
+										<div class="col-12">
+											<div class="card-body">
+												<h5 class="card-title">{{ techcrunch[i]['title'] }}</h5>
+												<p class="card-text">{{ techcrunch[i]['description'] }}</p>
+												<a href="{{ techcrunch[i]['url'] }}" class="btn btn-primary">More Details</a>
+											</div>	
+										</div>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				{% else %}
+					{% for i in range(0,5) %}
+						<div class="col-12 col-sm-8">
+							<div class="card my-2 text-white bg-dark p-4">
+								<div class="row">
+									{% if techcrunch[i]['urlToImage'] is not none %}
+										<div class="col-3 my-auto">
+											<img src="{{ techcrunch[i]['urlToImage'] }}" class="card-img-top">
+										</div>
+										<div class="col-9">
+											<div class="card-body">
+												<h5 class="card-title">{{ techcrunch[i]['title'] }}</h5>
+												<p class="card-text">{{ techcrunch[i]['description'] }}</p>
+												<a href="{{ techcrunch[i]['url'] }}" class="btn btn-primary">More Details</a>
+											</div>	
+										</div>
+									{% else %}
+										<div class="col-12">
+											<div class="card-body">
+												<h5 class="card-title">{{ techcrunch[i]['title'] }}</h5>
+												<p class="card-text">{{ techcrunch[i]['description'] }}</p>
+												<a href="{{ techcrunch[i]['url'] }}" class="btn btn-primary">More Details</a>
+											</div>	
+										</div>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				{% endif %}
+			</div>
+		</div>
+		<hr class="my-2">
+		<div>	
+		<h2 class="text-center">Engadget</h2>
+			<div class="row d-flex justify-content-center">
+				{% if engadget|length < 5%}
+					{% for i in range(0,engadget|length) %}
+						<div class="col-12 col-sm-8">
+							<div class="card my-2 text-white bg-dark p-4">
+								<div class="row">
+									{% if engadget[i]['urlToImage'] is not none %}
+									<div class="col-3 my-auto">
+										<img src="{{ engadget[i]['urlToImage'] }}" class="card-img-top">
+									</div>
+									<div class="col-9">
+										<div class="card-body">
+											<h5 class="card-title">{{ engadget[i]['title'] }}</h5>
+											<p class="card-text">{{ engadget[i]['description'] }}</p>
+											<a href="{{ engadget[i]['url'] }}" class="btn btn-primary">More Details</a>
+										</div>	
+									</div>
+									{% else %}
+										<div class="col-12">
+											<div class="card-body">
+												<h5 class="card-title">{{ engadget[i]['title'] }}</h5>
+												<p class="card-text">{{ engadget[i]['description'] }}</p>
+												<a href="{{ engadget[i]['url'] }}" class="btn btn-primary">More Details</a>
+											</div>	
+										</div>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				{% else %}
+					{% for i in range(0,5) %}
+						<div class="col-12 col-sm-8">
+							<div class="card my-2 text-white bg-dark p-4">
+								<div class="row">
+									{% if engadget[i]['urlToImage'] is not none %}
+									<div class="col-3 my-auto">
+										<img src="{{ engadget[i]['urlToImage'] }}" class="card-img-top">
+									</div>
+									<div class="col-9">
+										<div class="card-body">
+											<h5 class="card-title">{{ engadget[i]['title'] }}</h5>
+											<p class="card-text">{{ engadget[i]['description'] }}</p>
+											<a href="{{ engadget[i]['url'] }}" class="btn btn-primary">More Details</a>
+										</div>	
+									</div>
+									{% else %}
+										<div class="col-12">
+											<div class="card-body">
+												<h5 class="card-title">{{ engadget[i]['title'] }}</h5>
+												<p class="card-text">{{ engadget[i]['description'] }}</p>
+												<a href="{{ engadget[i]['url'] }}" class="btn btn-primary">More Details</a>
+											</div>	
+										</div>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				{% endif %}
+			</div>
+		</div>		
+		<hr class="my-2">
+		<div>	
+		<h2 class="text-center">Techradar</h2>
+			<div class="row d-flex justify-content-center">
+				{% if techradar|length < 5%}
+					{% for i in range(0,techradar|length) %}
+						<div class="col-12 col-sm-8">
+							<div class="card my-2 text-white bg-dark p-4">
+								<div class="row">
+									{% if techradar[i]['urlToImage'] is not none %}
+									<div class="col-3 my-auto">
+										<img src="{{ techradar[i]['urlToImage'] }}" class="card-img-top">
+									</div>
+									<div class="col-9">
+										<div class="card-body">
+											<h5 class="card-title">{{ techradar[i]['title'] }}</h5>
+											<p class="card-text">{{ techradar[i]['description'] }}</p>
+											<a href="{{ techradar[i]['url'] }}" class="btn btn-primary">More Details</a>
+										</div>	
+									</div>
+									{% else %}
+										<div class="col-12">
+											<div class="card-body">
+												<h5 class="card-title">{{ techradar[i]['title'] }}</h5>
+												<p class="card-text">{{ techradar[i]['description'] }}</p>
+												<a href="{{ techradar[i]['url'] }}" class="btn btn-primary">More Details</a>
+											</div>	
+										</div>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				{% else %}
+					{% for i in range(0,5) %}
+						<div class="col-12 col-sm-8">
+							<div class="card my-2 text-white bg-dark p-4">
+								<div class="row">
+									{% if techradar[i]['urlToImage'] is not none %}
+									<div class="col-3 my-auto">
+										<img src="{{ techradar[i]['urlToImage'] }}" class="card-img-top">
+									</div>
+									<div class="col-9">
+										<div class="card-body">
+											<h5 class="card-title">{{ techradar[i]['title'] }}</h5>
+											<p class="card-text">{{ techradar[i]['description'] }}</p>
+											<a href="{{ techradar[i]['url'] }}" class="btn btn-primary">More Details</a>
+										</div>	
+									</div>
+									{% else %}
+										<div class="col-12">
+											<div class="card-body">
+												<h5 class="card-title">{{ techradar[i]['title'] }}</h5>
+												<p class="card-text">{{ techradar[i]['description'] }}</p>
+												<a href="{{ techradar[i]['url'] }}" class="btn btn-primary">More Details</a>
+											</div>	
+										</div>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title%}Home Page{% endblock %}
+
+{% block stylesheet %}<link rel="stylesheet" type="text/css" href="static/index.css">{% endblock %}
+
+{% block content %}
+
+<div class="container">
+	<div class="jumbotron bg-dark text-white">
+	  <h1 class="display-4">Tech News</h1>
+	  <hr class="my-4">
+	  <p class="lead">Latest news and articles related to Science and Technology.</p>
+	</div>
+	<div class="row d-flex justify-content-around">
+		<div class="col-12 col-sm-3">
+			<div class="card bg-dark text-white" style="width: 100%;">
+			  <!-- <img src="..." class="card-img-top"> -->
+			  <div class="card-body">
+			    <h5 class="card-title">Articles</h5>
+			    <p class="card-text">Read the latest articles from a variety of fields</p>
+			    <a href="/articles" class="btn btn-primary">Articles</a>
+			  </div>
+			</div>
+		</div>	
+		<div class="col-12 col-sm-3">
+			<div class="card bg-dark text-white" style="width: 100%;">
+			  <!-- <img src="..." class="card-img-top"> -->
+			  <div class="card-body">
+			    <h5 class="card-title">News</h5>
+			    <p class="card-text">Keep up with the ongoings of tech companies</p>
+			    <a href="/news" class="btn btn-primary">News</a>
+			  </div>
+			</div>
+		</div>
+		<div class="col-12 col-sm-3">
+			<div class="card bg-dark text-white" style="width: 100%;">
+			  <!-- <img src="..." class="card-img-top"> -->
+			  <div class="card-body">
+			    <h5 class="card-title">NASA APOD</h5>
+			    <p class="card-text">Check out the APOD posted by NASA</p>
+			    <a href="/nasa-apod" class="btn btn-primary">NASA APOD</a>
+			  </div>
+			</div>
+		</div>			
+	</div>
+</div>
+
+{% endblock %}
